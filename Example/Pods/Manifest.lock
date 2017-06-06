@@ -1,0 +1,16 @@
+PODS:
+  - Exteptional (0.1.0)
+
+DEPENDENCIES:
+  - Exteptional (from `../`)
+
+EXTERNAL SOURCES:
+  Exteptional:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Exteptional: 601d3c049e21f7209818e5acad71122aea27076e
+
+PODFILE CHECKSUM: 62617ed7e92d490de8d8a6c5e5dca302dd5711d2
+
+COCOAPODS: 1.2.1

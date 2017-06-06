@@ -1,4 +1,7 @@
-# Exteptional
+# EXTeptional
+## when extension are exceptional
+
+![]()
 
 [![CI Status](http://img.shields.io/travis/matteocrippa/Exteptional.svg?style=flat)](https://travis-ci.org/matteocrippa/Exteptional)
 [![Version](https://img.shields.io/cocoapods/v/Exteptional.svg?style=flat)](http://cocoapods.org/pods/Exteptional)
@@ -17,13 +20,18 @@ Exteptional is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Exteptional"
+pod 'Exteptional'
 ```
 
 ## Author
 
-matteocrippa, matteo@boostco.de
+matteocrippa, @_ghego
 
 ## License
 
 Exteptional is available under the MIT license. See the LICENSE file for more info.
+
+
+## Credits
+
+Icon is taken by free emojii set by [Vincent Le Moign](https://dribbble.com/webalys)

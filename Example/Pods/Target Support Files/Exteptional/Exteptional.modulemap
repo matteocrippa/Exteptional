@@ -1,0 +1,6 @@
+framework module Exteptional {
+  umbrella header "Exteptional-umbrella.h"
+
+  export *
+  module * { export * }
+}
