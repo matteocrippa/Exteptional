@@ -11,7 +11,7 @@ import UIKit
 extension UISegmentedControl {
   
   /// Remove borders from a SegmentedControl
-  open func removeBorders(backgroundSelected: UIColor = .clear, textColor: UIColor = .clear, height: Int = 1) {
+  public func removeBorders(backgroundSelected: UIColor = .clear, textColor: UIColor = .clear, height: Int = 1) {
     
     let size = CGSize(width: 1, height: height)
     

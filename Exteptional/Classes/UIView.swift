@@ -86,7 +86,7 @@ extension UIView {
   /// Add a dashed border around the view
   ///
   /// - Parameter color: color of the dashes
-  open func addDashedBorder(color: UIColor) {
+  public func addDashedBorder(color: UIColor) {
     let color = color.cgColor
     
     let shapeLayer: CAShapeLayer = CAShapeLayer()
@@ -106,7 +106,7 @@ extension UIView {
   }
   
   /// Remove any shadow to view
-  open func removeShadow() {
+  public func removeShadow() {
     self.layer.shadowColor = UIColor.clear.cgColor
     self.layer.shadowOpacity = 0
     self.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -118,7 +118,7 @@ extension UIView {
 // MARK: Subviews handler
 extension UIView {
   /// Quick way to remove all subviews of current view
-  open func removeAllSubViews() {
+  public func removeAllSubViews() {
     _ = self.subviews.map {
       $0.removeFromSuperview()
     }
@@ -134,7 +134,7 @@ extension UIView {
   ///   - corners: what corners are needed to be rounded (refer to UIRectCorner values)
   ///   - backgroundColor: the background color
   ///   - radius: amount of rounded corner
-  open func makeTransparentAndRounded(_ corners: UIRectCorner = .allCorners, backgroundColor: UIColor = .white, radius: CGFloat = 6) {
+  public func makeTransparentAndRounded(_ corners: UIRectCorner = .allCorners, backgroundColor: UIColor = .white, radius: CGFloat = 6) {
     self.backgroundColor = backgroundColor
     round(corners: corners, radius: radius)
   }
@@ -144,7 +144,7 @@ extension UIView {
   /// - Parameters:
   ///   - corners: what corners are needed to be rounded (refer to UIRectCorner values)
   ///   - radius: radius of rounding
-  open func round(corners: UIRectCorner, radius: CGFloat) {
+  public func round(corners: UIRectCorner, radius: CGFloat) {
     _round(corners: corners, radius: radius)
   }
   
@@ -155,7 +155,7 @@ extension UIView {
   ///   - radius: radius of rounding
   ///   - borderColor: border color
   ///   - borderWidth: border width
-  open func round(corners: UIRectCorner, radius: CGFloat, borderColor: UIColor, borderWidth: CGFloat) {
+  public func round(corners: UIRectCorner, radius: CGFloat, borderColor: UIColor, borderWidth: CGFloat) {
     let mask = _round(corners: corners, radius: radius)
     addBorder(mask: mask, borderColor: borderColor, borderWidth: borderWidth)
   }
@@ -166,7 +166,7 @@ extension UIView {
   ///   - width: witdh to be rounded
   ///   - borderColor: set border color
   ///   - borderWidth: set border width
-  open func fullyRound(width: CGFloat, borderColor: UIColor, borderWidth: CGFloat) {
+  public func fullyRound(width: CGFloat, borderColor: UIColor, borderWidth: CGFloat) {
     layer.masksToBounds = true
     layer.cornerRadius = width / 2
     layer.borderWidth = borderWidth

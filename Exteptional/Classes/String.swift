@@ -11,12 +11,12 @@ import Foundation
 // MARK: - Localization
 extension String {
   /// Return current string localized
-  var localized: String {
+  public var localized: String {
     return NSLocalizedString(self, comment: "")
   }
   
   /// Return current string localized with extra parameters
-  func localize(with arguments: CVarArg...) -> String {
+  public func localize(with arguments: CVarArg...) -> String {
     return String(format: self.localized, arguments: arguments)
   }
 
@@ -25,12 +25,12 @@ extension String {
 // MARK: - Validation 
 extension String {
   /// Check if is a numeric only string
-  var isNumeric: Bool {
+  public var isNumeric: Bool {
     return !self.isEmpty && self.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
   }
   
   // Check if is a valid email
-  var isEmail: Bool {
+  public var isEmail: Bool {
     do {
       let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}", options: .caseInsensitive)
       return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
@@ -40,7 +40,7 @@ extension String {
   }
   
   /// Check if is a valid phone number
-  var isPhoneNumber: Bool {
+  public var isPhoneNumber: Bool {
     do {
       let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
       let matches = detector.matches(in: self, options: [], range: NSMakeRange(0, self.characters.count))
@@ -55,7 +55,7 @@ extension String {
   }
 
   /// Check if contains a valid url
-  var isUrl: Bool {
+  public var isUrl: Bool {
     return URL(string: self) != nil
   }
 
@@ -64,7 +64,7 @@ extension String {
 // MARK: - Manipulation
 extension String {
   /// Return omiss if empty string
-  var omiss: String {
+  public var omiss: String {
     if self.characters.count == 0 {
       return "--"
     } else {
@@ -73,7 +73,7 @@ extension String {
   }
   
   /// Return a truncated string according supplied params
-  func truncated(toMaxLength length: Int, trailing: String? = "...") -> String {
+  public func truncated(toMaxLength length: Int, trailing: String? = "...") -> String {
     if self.characters.count > length {
       let trailingText = trailing ?? ""
       let uptoIndex = length - 1 - trailingText.characters.count
@@ -84,7 +84,7 @@ extension String {
   }
   
   // Return a monogram according string structure (used in CareKit)
-  var monogram: String {
+  public var monogram: String {
     
     var monogram = ""
     let words = self.components(separatedBy: " ")
@@ -100,7 +100,7 @@ extension String {
   
   
   /// Return an attributed string from html
-  var html2AttributedString: NSAttributedString? {
+  public var html2AttributedString: NSAttributedString? {
     guard let data = data(using: .utf8) else { return nil }
     do {
       return try NSAttributedString(data: data, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue], documentAttributes: nil)
@@ -111,7 +111,7 @@ extension String {
   }
   
   /// Return a string from html
-  var html2String: String {
+  public var html2String: String {
     return html2AttributedString?.string ?? ""
   }
   
@@ -121,17 +121,17 @@ extension String {
 extension String {
   
   /// Return an int
-  var int: Int? {
+  public var int: Int? {
     return Int(self)
   }
   
   /// Return url
-  var url: URL? {
+  public var url: URL? {
     return URL(string: self)
   }
   
   /// Return an UIColor according the hexColor provided as string
-  var uiColor: UIColor? {
+  public var uiColor: UIColor? {
     var red: CGFloat = 0.0
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
@@ -176,7 +176,7 @@ extension String {
 }
 
 // MARK: - Functions
-extension String {
+fileprivate extension String {
   // MARK: - Monogram generator
   subscript (i: Int) -> String {
     return self.substring(with: self.startIndex..<self.characters.index(self.startIndex, offsetBy: i + 1))
