@@ -38,6 +38,21 @@ extension String {
       return false
     }
   }
+  
+  /// Check if is a valid phone number
+  var isPhoneNumber: Bool {
+    do {
+      let detector = try NSDataDetector(types: NSTextCheckingResult.CheckingType.phoneNumber.rawValue)
+      let matches = detector.matches(in: self, options: [], range: NSMakeRange(0, self.characters.count))
+      if let res = matches.first {
+        return res.resultType == .phoneNumber && res.range.location == 0 && res.range.length == self.characters.count
+      } else {
+        return false
+      }
+    } catch {
+      return false
+    }
+  }
 
   /// Check if contains a valid url
   var isUrl: Bool {
@@ -46,12 +61,23 @@ extension String {
 
 }
 
-// MARK: - Validation
+// MARK: - Manipulation
 extension String {
   /// Return omiss if empty string
   var omiss: String {
     if self.characters.count == 0 {
       return "--"
+    } else {
+      return self
+    }
+  }
+  
+  /// Return a truncated string according supplied params
+  func truncated(toMaxLength length: Int, trailing: String? = "...") -> String {
+    if self.characters.count > length {
+      let trailingText = trailing ?? ""
+      let uptoIndex = length - 1 - trailingText.characters.count
+      return self.substring(to: self.index(self.startIndex, offsetBy: uptoIndex)) + trailingText
     } else {
       return self
     }
@@ -87,6 +113,21 @@ extension String {
   /// Return a string from html
   var html2String: String {
     return html2AttributedString?.string ?? ""
+  }
+  
+}
+
+// MARK: - Conversion
+extension String {
+  
+  /// Return an int
+  var int: Int? {
+    return Int(self)
+  }
+  
+  /// Return url
+  var url: URL? {
+    return URL(string: self)
   }
   
   /// Return an UIColor according the hexColor provided as string
@@ -132,11 +173,10 @@ extension String {
     }
     return UIColor(red: red, green: green, blue: blue, alpha: alpha)
   }
-  
 }
 
 // MARK: - Functions
-public extension String {
+extension String {
   // MARK: - Monogram generator
   subscript (i: Int) -> String {
     return self.substring(with: self.startIndex..<self.characters.index(self.startIndex, offsetBy: i + 1))
