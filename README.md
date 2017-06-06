@@ -1,7 +1,7 @@
 # EXTeptional
-## when extension are exceptional
+when extension are exceptional
 
-![]()
+![EXTeptional](https://github.com/matteocrippa/Exteptional/blob/master/.github/exteptional.png?raw=true)
 
 [![CI Status](http://img.shields.io/travis/matteocrippa/Exteptional.svg?style=flat)](https://travis-ci.org/matteocrippa/Exteptional)
 [![Version](https://img.shields.io/cocoapods/v/Exteptional.svg?style=flat)](http://cocoapods.org/pods/Exteptional)
