@@ -13,6 +13,9 @@
 		1F425A66E303C701EE504FCA31F4AA56 /* Pods-Exteptional_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA1FE6FFBA9E4D51EA9C9C266E589B /* Pods-Exteptional_Tests-dummy.m */; };
 		253949AF8C94C014D946137DD510BC3C /* Exteptional-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D929742F8189298323C255288729C /* Exteptional-dummy.m */; };
 		48C763271EE6EB81008DEF29 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C763261EE6EB81008DEF29 /* UIView.swift */; };
+		48C763291EE6F1DA008DEF29 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C763281EE6F1DA008DEF29 /* UIApplication.swift */; };
+		48C7632B1EE6F212008DEF29 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */; };
+		48C7632D1EE6F248008DEF29 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7632C1EE6F248008DEF29 /* UIImage.swift */; };
 		6AABDB184060A262E20058A76E786840 /* Pods-Exteptional_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B003E0F60A81429B87E129F223316774 /* Pods-Exteptional_Example-dummy.m */; };
 		A3891AF49C5903E8303DEA2B3CA635FB /* Pods-Exteptional_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CABE36EBD1BEB55A0E8B48560AAD04E /* Pods-Exteptional_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6DDBBCF8ED0741E74B8CAAB736A2A40 /* Exteptional-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55174E8B786AF629A02EA9B0CD12037C /* Exteptional-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +41,9 @@
 		1BAD167ADD5FE392E1C5CE634E73C1C5 /* Pods_Exteptional_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Exteptional_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AD5EE36F84040D9C52CB1C6F557089 /* Pods-Exteptional_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Exteptional_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		48C763261EE6EB81008DEF29 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		48C763281EE6F1DA008DEF29 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		48C7632C1EE6F248008DEF29 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		4E13D19648EC5AD9570E13757BFC1148 /* Pods-Exteptional_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Exteptional_Example-umbrella.h"; sourceTree = "<group>"; };
 		55174E8B786AF629A02EA9B0CD12037C /* Exteptional-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Exteptional-umbrella.h"; sourceTree = "<group>"; };
 		55D120B36A6B0A9C70744E3E245510C8 /* Pods-Exteptional_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Exteptional_Example-resources.sh"; sourceTree = "<group>"; };
@@ -141,6 +147,9 @@
 			children = (
 				02934B9FC14D327449851D1AD18CFDC9 /* String.swift */,
 				48C763261EE6EB81008DEF29 /* UIView.swift */,
+				48C763281EE6F1DA008DEF29 /* UIApplication.swift */,
+				48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */,
+				48C7632C1EE6F248008DEF29 /* UIImage.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -340,8 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C763291EE6F1DA008DEF29 /* UIApplication.swift in Sources */,
 				253949AF8C94C014D946137DD510BC3C /* Exteptional-dummy.m in Sources */,
 				48C763271EE6EB81008DEF29 /* UIView.swift in Sources */,
+				48C7632D1EE6F248008DEF29 /* UIImage.swift in Sources */,
+				48C7632B1EE6F212008DEF29 /* UISegmentedControl.swift in Sources */,
 				13120E72F66752DDFB8C5989F52A6DE7 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
