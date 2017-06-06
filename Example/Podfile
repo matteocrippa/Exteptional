@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Exteptional_Example' do
+  pod 'Exteptional', :path => '../'
+
+  target 'Exteptional_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
