@@ -16,7 +16,6 @@
 		48C763291EE6F1DA008DEF29 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C763281EE6F1DA008DEF29 /* UIApplication.swift */; };
 		48C7632B1EE6F212008DEF29 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */; };
 		48C7632D1EE6F248008DEF29 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7632C1EE6F248008DEF29 /* UIImage.swift */; };
-		48D2AECA1EEDE68F003EA135 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D2AEC91EEDE68F003EA135 /* UITableViewCell.swift */; };
 		6AABDB184060A262E20058A76E786840 /* Pods-Exteptional_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B003E0F60A81429B87E129F223316774 /* Pods-Exteptional_Example-dummy.m */; };
 		A3891AF49C5903E8303DEA2B3CA635FB /* Pods-Exteptional_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CABE36EBD1BEB55A0E8B48560AAD04E /* Pods-Exteptional_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6DDBBCF8ED0741E74B8CAAB736A2A40 /* Exteptional-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55174E8B786AF629A02EA9B0CD12037C /* Exteptional-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,7 +44,6 @@
 		48C763281EE6F1DA008DEF29 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		48C7632C1EE6F248008DEF29 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		48D2AEC91EEDE68F003EA135 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		4E13D19648EC5AD9570E13757BFC1148 /* Pods-Exteptional_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Exteptional_Example-umbrella.h"; sourceTree = "<group>"; };
 		55174E8B786AF629A02EA9B0CD12037C /* Exteptional-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Exteptional-umbrella.h"; sourceTree = "<group>"; };
 		55D120B36A6B0A9C70744E3E245510C8 /* Pods-Exteptional_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Exteptional_Example-resources.sh"; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				48C763281EE6F1DA008DEF29 /* UIApplication.swift */,
 				48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */,
 				48C7632C1EE6F248008DEF29 /* UIImage.swift */,
-				48D2AEC91EEDE68F003EA135 /* UITableViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 				48C763271EE6EB81008DEF29 /* UIView.swift in Sources */,
 				48C7632D1EE6F248008DEF29 /* UIImage.swift in Sources */,
 				48C7632B1EE6F212008DEF29 /* UISegmentedControl.swift in Sources */,
-				48D2AECA1EEDE68F003EA135 /* UITableViewCell.swift in Sources */,
 				13120E72F66752DDFB8C5989F52A6DE7 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
