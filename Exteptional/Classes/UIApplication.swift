@@ -15,7 +15,7 @@ extension UIApplication {
       else {
         return false
     }
-    
+
     return UIApplication.shared.isRegisteredForRemoteNotifications && !settings.types.isEmpty
   }
 }

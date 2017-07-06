@@ -14,7 +14,7 @@ extension String {
   public var localized: String {
     return NSLocalizedString(self, comment: "")
   }
-  
+
   /// Return current string localized with extra parameters
   public func localize(with arguments: CVarArg...) -> String {
     return String(format: self.localized, arguments: arguments)
@@ -28,7 +28,7 @@ extension String {
   public var isNumeric: Bool {
     return !self.isEmpty && self.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
   }
-  
+
   // Check if is a valid email
   public var isEmail: Bool {
     do {
@@ -38,7 +38,7 @@ extension String {
       return false
     }
   }
-  
+
   /// Check if is a valid phone number
   public var isPhoneNumber: Bool {
     do {
@@ -71,7 +71,7 @@ extension String {
       return self
     }
   }
-  
+
   /// Return a truncated string according supplied params
   public func truncated(toMaxLength length: Int, trailing: String? = "...") -> String {
     if self.characters.count > length {
@@ -82,13 +82,13 @@ extension String {
       return self
     }
   }
-  
+
   // Return a monogram according string structure (used in CareKit)
   public var monogram: String {
-    
+
     var monogram = ""
     let words = self.components(separatedBy: " ")
-    
+
     if words.count > 0 {
       monogram = words[0][0]
     }
@@ -97,8 +97,7 @@ extension String {
     }
     return monogram.uppercased()
   }
-  
-  
+
   /// Return an attributed string from html
   public var html2AttributedString: NSAttributedString? {
     guard let data = data(using: .utf8) else { return nil }
@@ -115,34 +114,34 @@ extension String {
       return  nil
     }
   }
-  
+
   /// Return a string from html
   public var html2String: String {
     return html2AttributedString?.string ?? ""
   }
-  
+
 }
 
 // MARK: - Conversion
 extension String {
-  
+
   /// Return an int
   public var int: Int? {
     return Int(self)
   }
-  
+
   /// Return url
   public var url: URL? {
     return URL(string: self)
   }
-  
+
   /// Return an UIColor according the hexColor provided as string
   public var uiColor: UIColor? {
     var red: CGFloat = 0.0
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
     var alpha: CGFloat = 1.0
-    
+
     if self.hasPrefix("#") {
       let index   = self.characters.index(self.startIndex, offsetBy: 1)
       let hex     = self.substring(from: index)
@@ -187,7 +186,7 @@ fileprivate extension String {
   subscript (i: Int) -> String {
     return self.substring(with: self.startIndex..<self.characters.index(self.startIndex, offsetBy: i + 1))
   }
-  
+
   subscript (r: Range<Int>) -> String {
     get {
       return self.substring(with: self.characters.index(self.startIndex, offsetBy: r.lowerBound)..<self.characters.index(self.startIndex, offsetBy: r.upperBound))

@@ -39,7 +39,7 @@ import QuartzCore
       return layer.cornerRadius
     }
   }
-  
+
   /// The color of the shadow. Defaults to opaque black. Colors created from patterns are currently NOT supported. Animatable.
   @IBInspectable open var shadowColor: UIColor? {
     get {
@@ -49,7 +49,7 @@ import QuartzCore
       self.layer.shadowColor = newValue?.cgColor
     }
   }
-  
+
   /// The opacity of the shadow. Defaults to 0. Specifying a value outside the [0,1] range will give undefined results. Animatable.
   @IBInspectable open var shadowOpacity: Float {
     get {
@@ -59,7 +59,7 @@ import QuartzCore
       self.layer.shadowOpacity = newValue
     }
   }
-  
+
   /// The shadow offset. Defaults to (0, -3). Animatable.
   @IBInspectable open var shadowOffset: CGSize {
     get {
@@ -69,7 +69,7 @@ import QuartzCore
       self.layer.shadowOffset = newValue
     }
   }
-  
+
   /// The blur radius used to create the shadow. Defaults to 3. Animatable.
   @IBInspectable open var shadowRadius: Double {
     get {
@@ -88,11 +88,11 @@ extension UIView {
   /// - Parameter color: color of the dashes
   public func addDashedBorder(color: UIColor) {
     let color = color.cgColor
-    
+
     let shapeLayer: CAShapeLayer = CAShapeLayer()
     let frameSize = self.frame.size
     let shapeRect = CGRect(x: 0, y: 0, width: frameSize.width, height: frameSize.height)
-    
+
     shapeLayer.bounds = shapeRect
     shapeLayer.position = CGPoint(x: frameSize.width/2, y: frameSize.height/2)
     shapeLayer.fillColor = UIColor.clear.cgColor
@@ -101,10 +101,10 @@ extension UIView {
     shapeLayer.lineJoin = kCALineJoinRound
     shapeLayer.lineDashPattern = [6, 3]
     shapeLayer.path = UIBezierPath(roundedRect: shapeRect, cornerRadius: 0).cgPath
-    
+
     self.layer.addSublayer(shapeLayer)
   }
-  
+
   /// Remove any shadow to view
   public func removeShadow() {
     self.layer.shadowColor = UIColor.clear.cgColor
@@ -112,7 +112,7 @@ extension UIView {
     self.layer.shadowOffset = CGSize(width: 0, height: 0)
     self.layer.shadowRadius = 0.0
   }
-  
+
 }
 
 // MARK: Subviews handler
@@ -127,7 +127,7 @@ extension UIView {
 
 // MARK: Rounded corners
 extension UIView {
-  
+
   /// Make an UIView semi transparent with rounded corners
   ///
   /// - Parameters:
@@ -138,7 +138,7 @@ extension UIView {
     self.backgroundColor = backgroundColor
     round(corners: corners, radius: radius)
   }
-  
+
   /// Round the corners with a specified radius
   ///
   /// - Parameters:
@@ -147,7 +147,7 @@ extension UIView {
   public func round(corners: UIRectCorner, radius: CGFloat) {
     _round(corners: corners, radius: radius)
   }
-  
+
   /// Round the corners with a border
   ///
   /// - Parameters:
@@ -159,7 +159,7 @@ extension UIView {
     let mask = _round(corners: corners, radius: radius)
     addBorder(mask: mask, borderColor: borderColor, borderWidth: borderWidth)
   }
-  
+
   ///    Fully rounds an autolayout view (e.g. one with no known frame) with the given diameter and border
   ///
   /// - Parameters:
@@ -175,7 +175,7 @@ extension UIView {
 }
 
 private extension UIView {
-  
+
   @discardableResult func _round(corners: UIRectCorner, radius: CGFloat) -> CAShapeLayer {
     let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 1, width: bounds.width, height: bounds.height-2), byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
     let mask = CAShapeLayer()
@@ -183,7 +183,7 @@ private extension UIView {
     self.layer.mask = mask
     return mask
   }
-  
+
   func addBorder(mask: CAShapeLayer, borderColor: UIColor, borderWidth: CGFloat) {
     let borderLayer = CAShapeLayer()
     borderLayer.path = mask.path
@@ -193,5 +193,5 @@ private extension UIView {
     borderLayer.frame = bounds
     layer.addSublayer(borderLayer)
   }
-  
+
 }
