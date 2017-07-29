@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import <CommonCrypto/CommonCrypto.h>
+//#import <CommonCrypto/CommonCrypto.h>
 
 FOUNDATION_EXPORT double ExteptionalVersionNumber;
 FOUNDATION_EXPORT const unsigned char ExteptionalVersionString[];
