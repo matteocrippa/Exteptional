@@ -10,7 +10,7 @@ import Foundation
 
 extension Int {
   /// Convert Int of seconds since 1970 to Date
-  func dateFromSeconds() -> Date {
+  public func dateFromSeconds() -> Date {
     return Date(timeIntervalSince1970: TimeInterval(self))
   }
 }

@@ -10,12 +10,12 @@ import Foundation
 
 extension Date {
   /// Check current date is now or in the future
-  var isFuture: Bool {
+  public var isFuture: Bool {
     return self >= Date()
   }
   
   /// Check current date is in the past
-  var isPast: Bool {
+  public var isPast: Bool {
     return self < Date()
   }
 }
