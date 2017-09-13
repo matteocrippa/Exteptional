@@ -19,7 +19,26 @@ extension String {
   public func localize(with arguments: CVarArg...) -> String {
     return String(format: self.localized, arguments: arguments)
   }
+  
+}
 
+// MARK: - MD5
+extension String {
+  /*public var md5: String {
+    
+    let context = UnsafeMutablePointer<CC_MD5_CTX>.allocate(capacity: 1)
+    var digest = Array<UInt8>(repeating:0, count:Int(CC_MD5_DIGEST_LENGTH))
+    CC_MD5_Init(context)
+    CC_MD5_Update(context, string, CC_LONG(string.lengthOfBytes(using: String.Encoding.utf8)))
+    CC_MD5_Final(&digest, context)
+    context.deallocate(capacity: 1)
+    var hexString = ""
+    for byte in digest {
+      hexString += String(format:"%02x", byte)
+    }
+    
+    return hexString
+  }*/
 }
 
 // MARK: - Validation 
@@ -53,12 +72,12 @@ extension String {
       return false
     }
   }
-
+  
   /// Check if contains a valid url
   public var isUrl: Bool {
     return URL(string: self) != nil
   }
-
+  
 }
 
 // MARK: - Manipulation

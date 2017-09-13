@@ -12,7 +12,8 @@
 		1A7293B9BFA08AA44C67F28D43039F5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		1F425A66E303C701EE504FCA31F4AA56 /* Pods-Exteptional_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA1FE6FFBA9E4D51EA9C9C266E589B /* Pods-Exteptional_Tests-dummy.m */; };
 		253949AF8C94C014D946137DD510BC3C /* Exteptional-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D929742F8189298323C255288729C /* Exteptional-dummy.m */; };
-		48086BDB1F0D175E0013BE17 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48086BDA1F0D175E0013BE17 /* Date.swift */; };
+		48461DAF1F2D1D2300C4D100 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48461DAE1F2D1D2300C4D100 /* Date.swift */; };
+		48461DB11F2D1D4600C4D100 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48461DB01F2D1D4600C4D100 /* Int.swift */; };
 		48C763271EE6EB81008DEF29 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C763261EE6EB81008DEF29 /* UIView.swift */; };
 		48C763291EE6F1DA008DEF29 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C763281EE6F1DA008DEF29 /* UIApplication.swift */; };
 		48C7632B1EE6F212008DEF29 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */; };
@@ -41,7 +42,8 @@
 		15DE94C2048183849A2340D5F6B1B35C /* Pods-Exteptional_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Exteptional_Tests-resources.sh"; sourceTree = "<group>"; };
 		1BAD167ADD5FE392E1C5CE634E73C1C5 /* Pods_Exteptional_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Exteptional_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AD5EE36F84040D9C52CB1C6F557089 /* Pods-Exteptional_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Exteptional_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		48086BDA1F0D175E0013BE17 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		48461DAE1F2D1D2300C4D100 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		48461DB01F2D1D4600C4D100 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		48C763261EE6EB81008DEF29 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		48C763281EE6F1DA008DEF29 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
@@ -152,7 +154,8 @@
 				48C763281EE6F1DA008DEF29 /* UIApplication.swift */,
 				48C7632A1EE6F212008DEF29 /* UISegmentedControl.swift */,
 				48C7632C1EE6F248008DEF29 /* UIImage.swift */,
-				48086BDA1F0D175E0013BE17 /* Date.swift */,
+				48461DAE1F2D1D2300C4D100 /* Date.swift */,
+				48461DB01F2D1D4600C4D100 /* Int.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -326,15 +329,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
-				TargetAttributes = {
-					58FAB29175B948C55F95E5C8E93B400D = {
-						LastSwiftMigration = 0900;
-					};
-					713EF9FB554EFA735D23D22101475D83 = {
-						LastSwiftMigration = 0900;
-					};
-				};
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -362,11 +357,12 @@
 			files = (
 				48C763291EE6F1DA008DEF29 /* UIApplication.swift in Sources */,
 				253949AF8C94C014D946137DD510BC3C /* Exteptional-dummy.m in Sources */,
-				48086BDB1F0D175E0013BE17 /* Date.swift in Sources */,
+				48461DAF1F2D1D2300C4D100 /* Date.swift in Sources */,
 				48C763271EE6EB81008DEF29 /* UIView.swift in Sources */,
 				48C7632D1EE6F248008DEF29 /* UIImage.swift in Sources */,
 				48C7632B1EE6F212008DEF29 /* UISegmentedControl.swift in Sources */,
 				13120E72F66752DDFB8C5989F52A6DE7 /* String.swift in Sources */,
+				48461DB11F2D1D4600C4D100 /* Int.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,8 +421,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -465,8 +460,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -483,9 +477,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -493,21 +485,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -593,8 +579,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -611,9 +596,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -621,20 +604,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -648,7 +625,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -721,8 +697,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
