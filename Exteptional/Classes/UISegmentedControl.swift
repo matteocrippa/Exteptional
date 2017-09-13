@@ -20,7 +20,7 @@ extension UISegmentedControl {
     setBackgroundImage(UIImage().colored(with: .clear, size: size), for: .normal, barMetrics: .default)
     setBackgroundImage(UIImage().colored(with: backgroundSelected, size: size), for: .selected, barMetrics: .default)
 
-    let segAttributes: NSDictionary = [
+    let segAttributes = [
       NSAttributedStringKey.foregroundColor: textColor
     ]
 

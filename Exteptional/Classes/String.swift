@@ -119,17 +119,15 @@ extension String {
 
   /// Return an attributed string from html
   public var html2AttributedString: NSAttributedString? {
-    guard let data = data(using: .utf8) else { return nil }
     do {
-      return try NSAttributedString(
-        data: data,
-        options: [
-          NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
-          NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue
+      return try NSAttributedString(data: Data(utf8),
+                                    options: [
+                                      NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
+                                              NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8
         ],
-        documentAttributes: nil)
-    } catch let error as NSError {
-      print(error.localizedDescription)
+                                    documentAttributes: nil)
+    } catch {
+      print("error:", error)
       return  nil
     }
   }
