@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Exteptional'
-  s.version          = '0.2.5'
+  s.version          = '0.2.6'
   s.summary          = 'An EXTeptional collections of extensions.'
 
   s.description      = <<-DESC
