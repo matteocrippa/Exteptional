@@ -44,7 +44,7 @@ extension String {
 // MARK: - Random
 extension String {
 
-    static func random(length: Int = 20) -> String {
+    public static func random(length: Int = 20) -> String {
         let base = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_=+"
         var randomString: String = ""
 
