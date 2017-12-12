@@ -41,6 +41,21 @@ extension String {
   }*/
 }
 
+// MARK: - Random
+extension String {
+
+    static func random(length: Int = 20) -> String {
+        let base = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_=+"
+        var randomString: String = ""
+
+        for _ in 0..<length {
+            let randomValue = arc4random_uniform(UInt32(base.characters.count))
+            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
+        }
+        return randomString
+    }
+}
+
 // MARK: - Validation 
 extension String {
   /// Check if is a numeric only string
@@ -84,7 +99,7 @@ extension String {
 extension String {
   /// Return omiss if empty string
   public var omiss: String {
-    if self.characters.count == 0 {
+    if self.count == 0 {
       return "--"
     } else {
       return self
@@ -95,7 +110,7 @@ extension String {
   public func truncated(toMaxLength length: Int, trailing: String? = "...") -> String {
     if self.characters.count > length {
       let trailingText = trailing ?? ""
-      let uptoIndex = length - 1 - trailingText.characters.count
+      let uptoIndex = length - 1 - trailingText.count
       return self.substring(to: self.index(self.startIndex, offsetBy: uptoIndex)) + trailingText
     } else {
       return self
@@ -165,7 +180,7 @@ extension String {
       let scanner = Scanner(string: hex)
       var hexValue: CUnsignedLongLong = 0
       if scanner.scanHexInt64(&hexValue) {
-        switch (hex.characters.count) {
+        switch (hex.count) {
         case 3:
           red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
           green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0
