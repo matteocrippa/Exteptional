@@ -111,7 +111,7 @@ extension String {
         if self.count > length {
             let trailingText = trailing ?? ""
             let uptoIndex = length - 1 - trailingText.count
-            return self.substring(to: self.index(self.startIndex, offsetBy: uptoIndex)) + trailingText
+            return String(self[..<self.index(self.startIndex, offsetBy: uptoIndex)]) + trailingText
         } else {
             return self
         }
@@ -174,7 +174,7 @@ extension String {
         
         if self.hasPrefix("#") {
             let index   = self.index(self.startIndex, offsetBy: 1)
-            let hex     = self.substring(from: index)
+            let hex     = String(self[index...endIndex])
             let scanner = Scanner(string: hex)
             var hexValue: CUnsignedLongLong = 0
             if scanner.scanHexInt64(&hexValue) {
@@ -214,12 +214,12 @@ extension String {
 fileprivate extension String {
     // MARK: - Monogram generator
     subscript (i: Int) -> String {
-        return self.substring(with: self.startIndex..<self.index(self.startIndex, offsetBy: i + 1))
+        return String(self[self.startIndex..<self.index(self.startIndex, offsetBy: i + 1)])
     }
     
     subscript (r: Range<Int>) -> String {
         get {
-            return self.substring(with: self.index(self.startIndex, offsetBy: r.lowerBound)..<self.characters.index(self.startIndex, offsetBy: r.upperBound))
+            return String(self[self.index(self.startIndex, offsetBy: r.lowerBound)..<self.index(self.startIndex, offsetBy: r.upperBound)])
         }
     }
 }

@@ -21,11 +21,11 @@ extension UISegmentedControl {
     setBackgroundImage(UIImage().colored(with: backgroundSelected, size: size), for: .selected, barMetrics: .default)
 
     let segAttributes = [
-      NSAttributedStringKey.foregroundColor: textColor
+      NSAttributedString.Key.foregroundColor: textColor
     ]
 
     // set title attribute for selected
-    setTitleTextAttributes(segAttributes as [NSObject : AnyObject], for: .selected)
+    setTitleTextAttributes(segAttributes, for: .selected)
 
   }
 }

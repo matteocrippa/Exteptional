@@ -11,6 +11,6 @@ import UIKit
 extension UIApplication {
   /// Returns if push notification are enabled
   public static var isPushNotificationEnabled: Bool {
-    return UIApplication.isPushNotificationEnabled && UIApplication.shared.isRegisteredForRemoteNotifications
+    return UIApplication.shared.isRegisteredForRemoteNotifications
   }
 }
