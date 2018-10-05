@@ -1,16 +1,16 @@
 PODS:
-  - Exteptional (0.1.0)
+  - Exteptional (0.2.6)
 
 DEPENDENCIES:
   - Exteptional (from `../`)
 
 EXTERNAL SOURCES:
   Exteptional:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Exteptional: 601d3c049e21f7209818e5acad71122aea27076e
+  Exteptional: 0be7babcfd8ec9b42975760dab553c5291c5c3fb
 
 PODFILE CHECKSUM: 62617ed7e92d490de8d8a6c5e5dca302dd5711d2
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3
